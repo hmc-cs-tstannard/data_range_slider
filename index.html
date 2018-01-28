@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p> update 8 </p>
+          <p> update 9 </p>
 
           <button id="red" type="button" value=0 onclick="addOne('c-1-color');">
             red
@@ -93,7 +93,7 @@
     var newslider = document.querySelector('.regular-slider');
     var slider = noUiSlider.create(regularSlider, {
       start: [ 4000, 8000, 12000, 16000 ],
-      connect: [false, true, true, true, true],
+      connect: [true, true, true, true, true],
       range: {
         'min': [  2000 ],
         'max': [ 20000 ]
@@ -119,7 +119,29 @@
     {
       alert(klass);
       classes[i] = klass; 
+
+      slider = document.getElementById('slider');
+    
+    
+    var starter_points = [ 4000, 8000, 12000, 16000 ];
+    // Use origins to disable the sliders at the end     
+    var origins = slider.getElementsByClassName('noUi-origin');
+    
+    // first value gets set specially to avoid some stupid bug (CLEAN UP LATER)
+
+      slider.removeAttribute('disabled');
+
+      // Add class to slider
+      classes[0] = klass;
+
+      // Make slider and add color 
+      slider.noUiSlider.set(starter_points);
+
+      for ( var i = 0; i < connects.length; i++ ) {
+        connects[i].classList.add(classes[i]);
+      }
     }
+  
     </script>
 
 
