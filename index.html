@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p> update 5 </p>
+          <p> update 6 </p>
 
           <button id="red" type="button" value=0 onclick="addOne('c-1-color');">
             red
@@ -91,7 +91,7 @@
     <script>
     var regularSlider = document.querySelector('.regular-slider');
     var newslider = document.querySelector('.regular-slider');
-    var slider = noUiSlider.create(newslider, {
+    var slider = noUiSlider.create(regularSlider, {
       start: [ 4000, 8000, 12000, 16000 ],
       connect: [false, true, true, true, true],
       range: {
@@ -101,12 +101,19 @@
     });
 
     var connect = slider.querySelectorAll('.noUi-connect');
-    var classes = ['c-1-color', 'c-2-color', 'c-3-color', 'c-4-color', 'c-5-color'];
-
+    
     for ( var i = 0; i < connect.length; i++ ) {
         connect[i].classList.add(classes[i]);
     }
     
+
+    var connects = regularSlider.querySelectorAll('.noUi-connect');
+    var classes = ['c-1-color', 'c-2-color', 'c-3-color', 'c-4-color', 'c-5-color'];
+    for ( var i = 0; i < connects.length; i++ ) 
+    {
+        connects[i].classList.add(classes[i]);
+    }
+
 
     function addOne(klass)
     {
