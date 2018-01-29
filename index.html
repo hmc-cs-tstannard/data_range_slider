@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p> update 12 </p>
+          <p> update 13 </p>
 
           <button id="red" type="button" value=0 onclick="addOne('c-1-color');">
             red
@@ -101,7 +101,9 @@
     var classes = ['c-1-color', 'c-2-color', 'c-3-color', 'c-4-color', 'c-5-color'];
     for ( var i = 0; i < connects.length; i++ ) 
     {
-        connects[i].classList.add(classes[i]);
+        if (connects[i].classList.length > 1){
+          alert(connects[i].classList);
+        }
     }
 
 
