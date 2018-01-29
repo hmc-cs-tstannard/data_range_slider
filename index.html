@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p> update 14 </p>
+          <p> update 15 </p>
 
           <button id="red" type="button" value=0 onclick="addOne('c-1-color');">
             red
@@ -128,7 +128,9 @@
         slider.noUiSlider.set(starter_points);
 
         for ( var i = 0; i < connects.length; i++ ) {
-          alert(connects[i].classList.length);
+          if ( connects[i].classList.length > 0){
+            connects[i].classList.remove('c-3-color');
+          }
           connects[i].classList.add(newclasses[i]);
         }
       }
