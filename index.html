@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p> update 15 </p>
+          <p> update 13 </p>
 
           <button id="red" type="button" value=0 onclick="addOne('c-1-color');">
             red
@@ -100,8 +100,8 @@
     var connects = regularSlider.querySelectorAll('.noUi-connect');
     var classes = ['c-1-color', 'c-2-color', 'c-3-color', 'c-4-color', 'c-5-color'];
     for ( var i = 0; i < connects.length; i++ ) 
-    {    
-        connects[i].classList.add(newclasses[i]);
+    {
+        connects[i].classList.add(classes[i]);
     }
 
 
@@ -127,7 +127,7 @@
         // Make slider and add color 
         slider.noUiSlider.set(starter_points);
 
-        for ( var i = 2; i < connects.length; i++ ) {
+        for ( var i = 0; i < connects.length; i++ ) {
           connects[i].classList.add(newclasses[i]);
         }
       }
